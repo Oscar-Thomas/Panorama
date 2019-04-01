@@ -328,6 +328,7 @@ a.dbox-donation-button:hover {
 
   .feedback {
     height: auto;
+	width:100vw;
   }
 
   .typeform-widget {

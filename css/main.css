@@ -108,6 +108,7 @@
 
   .right {
     float: right;
+    line-height: 1.15;
   }
 
 
@@ -155,15 +156,8 @@ header {
       display: inline-block;
       width: calc(50% - 25px);
       border-top: solid rgba(0,0,0, 0.3) 1px;
-      height: 100px;
+      border-bottom: solid rgba(0,0,0, 0.3) 1px;
       margin-right: 50px;
-}
-
-.issue {
-  font-weight: 300;
-  margin-top: 14px;
-  line-height: 0.9;
-
 }
 
 button {
@@ -182,7 +176,6 @@ button {
   cursor: pointer;
   padding: 14px;
   padding-left: 0;
-  padding-bottom: 8px;
   border-top: solid rgba(0,0,0, 0.3) 1px;
   border-bottom: solid rgba(0,0,0, 0.3) 1px;
   text-align: left;
@@ -238,23 +231,64 @@ td {
 
 /* BOTTOM */
 
-.typeform-widget {
-  border-top: 1px solid black;
-  width: 100%;
-  height: 350px;
-  margin-top: 200px;
+.feedback-container {
+    border-top: solid rgba(0,0,0, 0.3) 1px;
+    margin-top: 150px;
+    width: 100vw;
 }
 
+.feedback {
+  width:  1100px;;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.typeform-widget {
+  width: 50%;
+  height: 350px;
+  float: left;
+}
+
+.donor-box {
+  width: 50%;
+  height: 350px;
+  float: right;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.donor-caption {
+  font-size: 20px;
+  margin-top: 110px;
+  margin-bottom: 35px;
+  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.7;
+}
+
+  .dbox-donation-button {
+    width:200px;opacity:1; background:#000000; color: #fff;text-decoration: none;font-family: sans-serif;display: inline-block;font-size: 24px;font-weight:700;padding-top: 10px; padding-bottom: 12px; box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+  }
+
+a.dbox-donation-button:hover {
+    background-color: #252525;
+    text-decoration: none;
+    transition: background-color 0.2s ease 0s, color 0.2s ease 0s, border-color 0.2s ease 0s, opacity 0.2s ease 0s;
+  }
 
 .footer {
-  padding-top: 5px;
   border-top: solid rgba(0,0,0, 0.3) 1px;
-  height: 40px;
+  padding-top: 5px;
+  height: 50px;
   width: 100%;
+  overflow: hidden;
 
 }
 
 .footer_content {
+
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
@@ -292,13 +326,32 @@ td {
     bottom: 0
   }
 
+  .feedback {
+    height: auto;
+  }
+
   .typeform-widget {
-    margin-top: 100px;
+    width: 100vw;
+    float: none;
+    border-bottom: solid rgba(0,0,0, 0.3) 1px;
+  }
+
+  .donor-box {
+  width: 100vw;
+  float: none;
+  }
+
+
+
+  .donor-caption {
+      margin-top: 120px;
+      font-size: 20px;
   }
 
   .footer_content {
     width: 80vw;
   }
+
 }
 
 @media (max-width: 800px) {
@@ -341,6 +394,15 @@ td {
   }
 }
 
+@media (max-width: 480px) {
+  .caption > .right {
+    float: left;
+  }
+
+    .issue {
+  display: none;
+  }
+}
 
 @media (max-width: 420px) {
 
@@ -376,9 +438,16 @@ td {
     width: 100%
   }
 
+  .caption > .right {
+    float: right;
+    margin-top: 16px;
+  }
+
   .accordion {
+    border-top: none;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: 16px;
-    padding-bottom: 12px;
   }
 
   .panel {
@@ -387,6 +456,18 @@ td {
 
   .distribution {
     width: 100%;
+  }
+
+  .donor-box {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .donor-caption {
+    color: rgba(0, 0, 0, 0.8);
+    opacity: 0.7;
+    margin: 25px;
+    margin-top: 110px;
   }
 
   .footer {
